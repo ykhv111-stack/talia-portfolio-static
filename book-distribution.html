@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Distribution — Talia Tamir</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .case-hero { padding: clamp(60px, 9vw, 100px) 0 clamp(40px, 6vw, 64px); }
+    .case-hero h1 { margin-bottom: 16px; }
+    .case-hero .subtitle { font-size: clamp(17px, 2vw, 20px); color: var(--gray); max-width: 560px; line-height: 1.55; }
+    .case-body { padding-bottom: clamp(64px, 10vw, 120px); }
+    .highlight-box { background: rgba(217,122,78,0.06); border-left: 3px solid var(--orange); padding: 16px 20px; border-radius: 0 4px 4px 0; margin: 24px 0; }
+    .highlight-box p { color: var(--fg); font-size: 16px; }
+    .data-block { background: #fff; border: 1px solid var(--light-gray); border-radius: 4px; margin: 24px 0; overflow: hidden; }
+    .data-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 14px 20px; border-bottom: 1px solid var(--light-gray); font-size: 15px; align-items: start; }
+    .data-row:last-child { border-bottom: none; }
+    .data-key { font-weight: 600; color: var(--fg); }
+    .data-val { color: var(--gray); line-height: 1.5; }
+    .ai-block { background: #fff; border: 1px solid var(--light-gray); border-radius: 4px; padding: 24px; margin: 24px 0; }
+    .ai-block h4 { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .ai-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--light-gray); font-size: 15px; align-items: flex-start; }
+    .ai-item:last-child { border-bottom: none; }
+    .ai-item::before { content: '↳'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+    .ai-item span { color: var(--gray); line-height: 1.5; }
+    @media (max-width: 560px) { .data-row { grid-template-columns: 1fr; gap: 4px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Talia Tamir</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="iron-swords.html">Iron Swords</a></li>
+    <li><a href="portfolio-website.html">Portfolio</a></li>
+    <li><a href="book-distribution.html" class="active">Book Distribution</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="case-hero">
+  <div class="container--text">
+    <p class="label" style="margin-bottom:16px;">2022 – 2024</p>
+    <h1 class="reveal">Book Distribution</h1>
+    <p class="subtitle reveal reveal-delay-1">Operations and analytics for 5 published books across 120+ stores — using data and AI to make decisions that usually require a full team.</p>
+  </div>
+</section>
+
+<div class="container--text">
+  <div class="meta-bar reveal">
+    <div class="meta-item"><span class="label">Stores</span><span class="meta-val">120+</span></div>
+    <div class="meta-item"><span class="label">Titles</span><span class="meta-val">5 published books</span></div>
+    <div class="meta-item"><span class="label">Revenue tracked</span><span class="meta-val">250,000+ NIS</span></div>
+    <div class="meta-item"><span class="label">Books distributed</span><span class="meta-val">12,000+</span></div>
+  </div>
+</div>
+
+<div class="case-body">
+  <div class="container--text">
+    <div class="prose">
+
+      <div class="section-label reveal"><span class="label">The Problem</span></div>
+      <p class="reveal">Israeli book distribution is fragmented — each store has its own terms, return policy, and buyer. Five titles across 120 stores means hundreds of moving parts running simultaneously. The authors were writers, not operators. I was the operations layer.</p>
+      <div class="highlight-box reveal">
+        <p>A good operations system is invisible. If the answer to "how's distribution?" is "fine, as usual" — it's working.</p>
+      </div>
+
+      <div class="section-label reveal" style="margin-top:48px;"><span class="label">The Data Model</span></div>
+      <p class="reveal">Before managing distribution, I built the analytics to understand it. I tracked every variable that affected whether a book sold: store type, location, buyer relationship, seasonal timing, shelf placement.</p>
+
+      <div class="data-block reveal">
+        <div class="data-row"><span class="data-key">Channel pricing</span><span class="data-val">Three separate margin models — independents, chains, direct-to-reader. Each with different terms and return rates. Every pricing decision came from the matrix, not gut feel.</span></div>
+        <div class="data-row"><span class="data-key">Store performance</span><span class="data-val">Monthly sell-through rates per store × title. Flagged underperformers before they became losses. Cut stores below 90-day threshold — freed inventory that moved within two weeks elsewhere.</span></div>
+        <div class="data-row"><span class="data-key">Revenue</span><span class="data-val">Full reconciliation across all channels — orders, invoices, payments, outstanding balances. 250,000+ NIS tracked with zero accounting errors over two years.</span></div>
+        <div class="data-row"><span class="data-key">Reporting cadence</span><span class="data-val">Monthly, not weekly. Weekly reports produced anxiety. Monthly reviews produced decisions.</span></div>
+      </div>
+
+      <div class="section-label reveal" style="margin-top:48px;"><span class="label">AI as Analyst</span></div>
+      <p class="reveal">I used AI to do things that would normally require a team — market research, competitive modeling, pattern recognition. Here's what that actually looked like:</p>
+
+      <div class="ai-block reveal">
+        <h4>Specific use cases</h4>
+        <div class="ai-item"><span><strong>Market mapping:</strong> Fed AI a brief on the Israeli publishing landscape. Got back a prioritized store list by region and buyer profile. Planned my entire outreach order from it.</span></div>
+        <div class="ai-item"><span><strong>Pricing model:</strong> Asked AI to model margin scenarios at different volume thresholds per channel. It caught that our chain pricing was leaving ~12% revenue on the table. I adjusted the matrix.</span></div>
+        <div class="ai-item"><span><strong>Pattern recognition:</strong> Pasted monthly sales data into a conversation and asked what I was missing. It spotted a seasonal dip near university exam periods — invisible in the spreadsheet. I started timing new title drops around it.</span></div>
+        <div class="ai-item"><span><strong>Negotiation prep:</strong> Before major store conversations, I asked AI to argue the other side and surface weak points in my position. Made me a better negotiator without needing a second person in the room.</span></div>
+      </div>
+
+      <div class="section-label reveal" style="margin-top:48px;"><span class="label">Impact</span></div>
+      <div class="impact-grid" style="margin-bottom:32px;">
+        <div class="impact-item reveal reveal-delay-1"><div class="impact-number orange">12k+</div><div class="impact-desc">Books distributed</div></div>
+        <div class="impact-item reveal reveal-delay-2"><div class="impact-number teal">120+</div><div class="impact-desc">Stores managed</div></div>
+        <div class="impact-item reveal reveal-delay-3"><div class="impact-number orange">250k</div><div class="impact-desc">NIS tracked</div></div>
+        <div class="impact-item reveal reveal-delay-4"><div class="impact-number teal">2yr</div><div class="impact-desc">System ran continuously</div></div>
+      </div>
+
+      <div class="section-label reveal" style="margin-top:48px;"><span class="label">If I did this today</span></div>
+      <h3 class="reveal">The agent finds the opportunities. I make the call.</h3>
+      <p class="reveal">Most of what I did manually — finding new stores, flagging underperformers, modeling pricing — an agent could run continuously. It would come to me with a briefing: here's what moved, here's what didn't, here's what I think you should consider. I make the decision, then feed the result of real customer interactions back in. The agent learns from what I learn in the field.</p>
+      <blockquote class="reveal">My constraint was attention. A well-built agent removes that constraint entirely.</blockquote>
+
+    </div>
+  </div>
+</div>
+
+<section class="contact-section" id="contact">
+  <h2>let's talk.</h2>
+  <p>Happy to talk through the data model, the pricing matrix, or what I'd change.</p>
+  <div class="contact-links">
+    <a href="https://linkedin.com/in/talia-tamir" class="contact-link" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/972502577434" class="contact-link" target="_blank">WhatsApp</a>
+    <a href="mailto:taliatamirg@gmail.com" class="contact-link">Email</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Talia Tamir</span>
+  <a href="index.html">← Back to home</a>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
